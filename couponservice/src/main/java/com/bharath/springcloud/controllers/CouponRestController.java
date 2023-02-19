@@ -14,13 +14,14 @@ import com.bharath.springcloud.repos.CouponRepo;
 @RestController
 @RequestMapping("/couponapi")
 public class CouponRestController {
+	
 
 	@Autowired
 	CouponRepo repo;
 
 	@RequestMapping(value = "/coupons", method = RequestMethod.POST)
 	public Coupon create(@RequestBody Coupon coupon) {
-
+System.out.println("Hiii");
 		return repo.save(coupon);
 
 	}
